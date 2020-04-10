@@ -28,9 +28,9 @@ public class Main {
         long test1 = testPerformance(list, (l) -> Utils.isValidListIf(l));
         long test2 = testPerformance(list, (l) -> Utils.isValidListInline(l));
         long test3 = testPerformance(list, (l) -> Utils.isValidListOptional(l));
-        System.out.println("usando if      :" + test1);
-        System.out.println("usando inline  :" + test2);
-        System.out.println("usando optional:" + test3);
+        System.out.printf("usando if      :%10d%n", test1);
+        System.out.printf("usando inline  :%10d%n", test2);
+        System.out.printf("usando optional:%10d%n", test3);
 
         String test = "12345678990qwertyuiopasdfghjklzxcvbnm";
         long test4 = testPerformance(test, t -> Utils.isValidStringIf(t));
@@ -39,10 +39,10 @@ public class Main {
         long test7 = testPerformance(test, t -> StringUtils.isNotBlank(t));
 
         System.out.println("--- MIDIENDO VALID STRING");
-        System.out.println("usando if      :" + test4);
-        System.out.println("usando inline  :" + test5);
-        System.out.println("usando optional:" + test6);
-        System.out.println("usando lang3   :" + test7);
+        System.out.printf("usando if      :%10d%n" ,test4);
+        System.out.printf("usando inline  :%10d%n" , test5);
+        System.out.printf("usando optional:%10d%n" , test6);
+        System.out.printf("usando lang3   :%10d%n" , test7);
 
     }
 
